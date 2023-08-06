@@ -12,3 +12,17 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+const galleryListEl = document.querySelector('.gallery')
+
+function makeGaleryListMarkup(imagesArr) {
+  return imagesArr.map(image => `<li class=galery-item><img src=${image.url} alt=${image.alt} width=360></li>`).join("")
+}
+galleryListEl.insertAdjacentHTML("beforeend", makeGaleryListMarkup(images))
+
+// Добавляю через інлайн бо думаю що так потребує задача, для тренування js скілів (міг і в CSS добавити)
+galleryListEl.style.display = "flex";
+galleryListEl.style.gap = "30px";
+galleryListEl.style.justifyContent = "center";
+galleryListEl.style.listStyle = "none";
+galleryListEl.style.alignItems = "center";

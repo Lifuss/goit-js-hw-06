@@ -16,3 +16,5 @@ const ingredientListMarkup = ingredients.map(ingredient => {
   return ingredientsItemEl
 })
 ingredientsListEl.append(...ingredientListMarkup)
+
+// Done
