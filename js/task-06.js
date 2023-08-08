@@ -1,14 +1,13 @@
 const inputEl = document.querySelector('#validation-input');
 
 function validColor() {
-  if (inputEl.value.length < Number(inputEl.dataset.length)) {
-    inputEl.classList.add('invalid');
-  } else {
-    // додаткова перевірка, бо якщо ввести від початку 6+ цифр replace не спрацює бо нема що замінити
+  if (inputEl.value.length === Number(inputEl.dataset.length)) {
     if (inputEl.classList.contains('invalid')) {
-      inputEl.classList.replace('invalid', 'valid');
+      inputEl.classList.remove('invalid');
     }
     inputEl.classList.add('valid');
+  } else {
+    inputEl.classList.add('invalid');
   }
 }
 

@@ -4,10 +4,11 @@ formEl.addEventListener('submit', formExecute);
 const newUser = {};
 
 function formExecute(event) {
+  const {
+    elements: { email, password },
+  } = formEl;
   event.preventDefault();
-  if (
-    !isFormValidate(formEl.elements.email.value, formEl.elements.password.value)
-  ) {
+  if (!isFormValidate(email.value, password.value)) {
     return alert('Всі поля повинні бути заповнені');
   }
   const formData = new FormData(event.currentTarget);
