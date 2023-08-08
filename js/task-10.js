@@ -24,7 +24,6 @@ function createBox(amount) {
     if (Number(amount) === 1 && refs.boxes.children.length > 0) {
       i = refs.boxes.children.length;
     }
-    console.log(refs.boxes.children.length);
     const divEl = document.createElement('div');
     divEl.style.width = `${(boxWidth += i * 10)}px`;
     divEl.style.height = `${(boxHeight += i * 10)}px`;
